@@ -1,4 +1,5 @@
 import reactivemongo.api._
+import scala.concurrent.ExecutionContext.Implicits.global
 
 class SphereMongoDB(serverList:List[String]) {
   private val connection = (new MongoDriver).connection(serverList)
